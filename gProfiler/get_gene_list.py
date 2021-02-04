@@ -3,7 +3,7 @@ import pandas as pd
 from datetime import datetime
 
 
-def generate_gene_list(in_path, name, out_path):
+def get_gene_list(in_path, name, out_path):
     """
     Return g:Profiler-compatible gene list from excel file.
 
