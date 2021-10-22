@@ -46,7 +46,4 @@ scatterPlot <- function(simMatrix, reducedTerms,
 
 options(ggrepel.max.overlaps = Inf)
 
-## 465 X 325
 scatterPlot(simMatrix, data)
-
-#barchart
