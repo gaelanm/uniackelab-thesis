@@ -23,12 +23,11 @@ We therefore coupled GOEA visualizations with Genewalk interpretations to descri
 Rscript process_GOST.R JOB_ID ORGDB GOID THRESHOLD INPUT_PATH
 ```
 where:
-JOB_ID is a user-generated identifier
-ORGDB is a organisms genome annotation (org.Hs.eg.db for Homo sapiens)
-GOID is one of BP, MF, and CC depending on user interest
-THRESHOLD is the user-defined cut-off for semantic similarity reduction
-INPUT_PATH is the/file/path/ to a gProfiler GOEA.csv
-
+* *JOB_ID* is a user-generated identifier
+* *ORGDB* is a organisms genome annotation (org.Hs.eg.db for Homo sapiens)
+* *GOID* is one of BP, MF, and CC depending on user interest
+* *THRESHOLD* is the user-defined cut-off for semantic similarity reduction
+* *INPUT_PATH* is the/file/path/ to a gProfiler GOEA.csv
 * Semantic similarity and the reduced GO profile of the input is stored in ./jobs/JOB_ID
 * To quickly visualize the reduced data, execute in commandline:
 
