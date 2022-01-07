@@ -1,15 +1,12 @@
 
-# GOEA analyses implicates ubiquitin-like ISG15 modifier in ribonucleoprotein complex dynamics
+# Gene Ontology Enrichment Analysis implicates ubiquitin-like interferon-stimulated gene 15 (ISG15) in ribonucleoprotein complex dynamics
 
-ISG15 is a ubiquitin-like modifier that is co-translationally conjugated to hundreds of intracellular proteins. 
+ISG15 is co-translationally conjugated to hundreds of intracellular targets using a set of ubiquitin E1, E2, and E3-like cysteine proteases. ISG15 is commonly upregulated in most cancers, and has been implicated in metastasis, epithelial-to-mesenchymal transition, and inflammation. Despite two decades of proteomic target identification, there has been no system-level description of ISG15 modification and most of our knowledge comes from limited targeted experiments.
 
-There have been 5 studies with published ISG15-conjugate proteomics within the last 3 years, however, our interpretation of these lists are constrained by reduced publication frequency starting in the late 2000s. 
-
-We therefore coupled GOEA visualizations with Genewalk interpretations to describe the system-level context of the ISGylome.
-
-## Description
+![alt text](https://github.com/gaelanm/uniackelab-thesis/blob/assets/isg15_targets.png?raw=true)
 
 ## Getting Started
+This repository is undergoing constant changes as I develop better practices; please feel free to share any feedback.
 
 ### Dependencies
 
@@ -19,17 +16,19 @@ We therefore coupled GOEA visualizations with Genewalk interpretations to descri
 ### Executing program
 
 * From the main directory commandline, execute:
+
 ```
 Rscript process_GOST.R JOB_ID ORGDB GOID THRESHOLD INPUT_PATH
 ```
+
 where:
 * *JOB_ID* is a user-generated identifier
-* *ORGDB* is a organisms genome annotation (org.Hs.eg.db for Homo sapiens)
-* *GOID* is one of BP, MF, and CC depending on user interest
-* *THRESHOLD* is the user-defined cut-off for semantic similarity reduction
-* *INPUT_PATH* is the/file/path/ to a gProfiler GOEA.csv
+* *ORGDB* is a organisms genome annotation (ie org.Hs.eg.db, org.Mm.eg.db)
+* *GOID* is BP, MF, or CC for specific GO branch
+* *THRESHOLD* is the user-defined cut-off for semantic similarity reduction (0.0 - 1.0; higher values reduce the number of parent terms)
+* *INPUT_PATH* is the/file/path/ to a gProfiler-generated GOEA.csv
 * Semantic similarity and the reduced GO profile of the input is stored in ./jobs/JOB_ID
-* To quickly visualize the reduced data, execute in commandline:
+* Quickly visualize the reduced data in UNIX:
 
 ```
 Rscript get_scatter.R path/to/semsim path/to/reducedterms
