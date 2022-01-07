@@ -57,3 +57,8 @@ Jessica Whittaker
 Narasimhan et al. (1996). 
 Conjugation of the 15-kDa Interferon-induced Ubiquitin Homolog Is Distinct from That of Ubiquitin. 
 JBC, 271(1), 324-330.
+
+<a id="2">2.</a> 
+Thery et al. (2021). 
+Proteomics Mapping of the ISGylation Landscape in Innate Immunity. 
+Front Immunol, 12, doi: 10.3389/fimmu.2021.720765.
